@@ -73,6 +73,7 @@ func renderTemplate(w http.ResponseWriter, tmpl string, p *Page) {
 	}
 }
 func main() {
+	//the viewHandler will get registered against this pattern in the DefaultServerMux
 	http.HandleFunc("/view/",viewHandler)
 	http.HandleFunc("/edit/",editHandler)
 	http.HandleFunc("/save/",saveHandler)
